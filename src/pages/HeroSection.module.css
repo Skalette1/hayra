@@ -1,0 +1,123 @@
+header {
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 1rem;
+  position: relative;
+}
+
+nav ul {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  font-family: "Golos";
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  cursor: pointer;
+  transition: 0.5s all ease-in-out;
+}
+
+nav ul li:hover {
+  text-decoration: underline;
+}
+
+.burger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 25px;
+  height: 20px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 20;
+}
+
+.burgerLine {
+  width: 100%;
+  height: 3px;
+  background-color: var(--green, #01753D);
+  border-radius: 2px;
+  transition: all 0.3s linear;
+}
+
+@media (max-width: 768px) {
+  header {
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0.8rem;
+    background-color: rgb(247, 245, 245);
+    z-index: 120;
+    position: relative;
+  }
+
+  nav {
+    position: fixed;
+    top: 60px; 
+    left: 0;
+    width: 100vw;
+    height: calc(100vh - 60px);
+    background-color: white;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 1.5rem;
+    overflow-y: auto;
+  }
+
+  nav.open {
+    transform: translateX(0);
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  nav ul li {
+    font-size: 1.6rem;
+    text-align: left;
+    width: 100%;
+  }
+
+  .burger {
+    position: fixed;
+    top: 30px;
+    right: 20px;
+    z-index: 130;
+    display: flex;
+  }
+}
+
+/* Анимация бургера в крестик */
+.burger.open .burgerLine:nth-child(1) {
+  transform: rotate(45deg) translate(4px, 4px);
+}
+
+.burger.open .burgerLine:nth-child(2) {
+  opacity: 0;
+}
+
+.burger.open .burgerLine:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.burgerLine {
+  transition: all 0.3s ease;
+}

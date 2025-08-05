@@ -1,0 +1,160 @@
+
+:root {
+  --green: #01753D;
+}
+
+.HeroSectionContainer {
+  margin-top: 1rem;
+  position: relative;
+  z-index: 10;
+  background-color: #fff;
+  padding: 2rem;
+  padding-top: 4rem;
+  border-radius: 70px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  flex: 1;
+  min-height: 70vh;
+}
+
+.HeroSectionContainer div {
+  background-color: #fff;
+}
+
+.heroSectionLeft {
+  font-size: 1rem;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.heroSectionLeft p {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 1.2rem;
+}
+
+.heroSectionLeft h3 {
+  display: flex;
+  text-align: right;
+  font-family:Arial, Helvetica, sans-serif;
+  font-size: 1.3rem;
+  font-weight: 200;
+}
+
+.heroSectionLeftBottom h3 {
+  justify-content: flex-end;
+  font-weight: 400;
+  font-size: 2rem;
+}
+
+h1 {
+  color: var(--green);
+  font-size: 10em;
+  font-family: "Golos";
+  background-image: url("../../../public/photo_2025-08-05_23-25-12.jpg");
+  background-position: center top;
+  background-repeat: no-repeat; 
+  background-size: cover; 
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  display: block;
+  width: 100%;
+  transform: scaleX(1.1);
+}
+
+.heroSectionRight {
+  font-size: 2.2rem;
+  display: flex;
+  flex-direction: column;     
+  justify-content: center; 
+  height: 100%;
+}
+
+.heroSectionRight {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+  height: 100%; 
+}
+
+.heroSectionRight h3 {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.heroSectionRightBtnCont {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.heroSectionRightBtnCont button {
+  cursor: pointer;
+  padding: .9rem 2rem;
+  color: #fff;
+  background-color: var(--green);
+  font-size: 1.2rem;
+  font-weight: 600;
+  border: 2px solid var(--green);
+  border-radius: .5rem;
+  transition: .3s all ease-in-out;
+}
+
+.heroSectionRightBtnCont .helpBtn {
+  background: #fff;
+  color: var(--green);
+  display: flex;
+  justify-content: flex-end;
+}
+
+.heroPhone {
+  height: 300px;
+  width: 260px;
+  justify-content: flex-end;
+  margin-bottom: 0;
+  margin-top: auto;
+  transform: translateY(20%);
+}
+
+.heroSectionRightBtnCont button:hover {
+  color: #fff;
+  background-color: #AE9B31;
+  border-radius: 2px solid #AE9B31;
+}
+
+ video {
+  z-index: .9;
+  height: 300px;
+  width: 100%;
+  border-radius: 70px;
+  object-fit: cover;
+  transform: translateY(-77%);
+}
+
+@media (max-width: 768px) {
+  h1 {
+    width: 100%;
+    text-align: center;
+  }
+
+  .HeroSectionContainer {
+    flex-direction: column; 
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .heroSectionRight {
+    align-items: flex-start; 
+    text-align: left; 
+  }
+
+  .heroPhone {
+    transform: translate(15%, 10%);
+    justify-content: center;
+  }
+}
