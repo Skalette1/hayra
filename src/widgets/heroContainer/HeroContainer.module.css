@@ -1,6 +1,6 @@
-
 :root {
   --green: #01753D;
+  --gold: #AE9B31;
 }
 
 .HeroSectionContainer {
@@ -14,75 +14,76 @@
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  flex: 1;
   min-height: 70vh;
+  overflow: hidden;
+  box-sizing: border-box;
 }
 
 .HeroSectionContainer div {
-  background-color: #fff;
+  background-color: transparent;
 }
 
 .heroSectionLeft {
+  flex: 1;
+  min-width: 300px;
   font-size: 1rem;
-  background-color: #fff;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  padding: 1rem;
 }
 
 .heroSectionLeft p {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 1.5vw, 1.5rem);
+  line-height: 1.5;
+  margin-bottom: 2rem;
 }
 
 .heroSectionLeft h3 {
-  display: flex;
   text-align: right;
-  font-family:Arial, Helvetica, sans-serif;
-  font-size: 1.3rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: clamp(1rem, 1.5vw, 1.5rem);
   font-weight: 200;
 }
 
 .heroSectionLeftBottom h3 {
-  justify-content: flex-end;
   font-weight: 400;
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+  margin-bottom: 1rem;
 }
 
 h1 {
   color: var(--green);
-  font-size: 10em;
+  font-size: clamp(4rem, 10vw, 10rem);
   font-family: "Golos";
   background-image: url("../../../public/photo_2025-08-05_23-25-12.jpg");
   background-position: center top;
-  background-repeat: no-repeat; 
-  background-size: cover; 
+  background-repeat: no-repeat;
+  background-size: cover;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   display: block;
   width: 100%;
-  transform: scaleX(1.1);
+  line-height: 0.9;
+  margin: 1rem 0;
 }
 
 .heroSectionRight {
-  font-size: 2.2rem;
-  display: flex;
-  flex-direction: column;     
-  justify-content: center; 
-  height: 100%;
-}
-
-.heroSectionRight {
+  flex: 1;
+  min-width: 300px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; 
-  height: 100%; 
+  justify-content: space-between;
+  padding: 1rem;
+  position: relative;
 }
 
 .heroSectionRight h3 {
   font-family: 'Times New Roman', Times, serif;
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 3vw, 3rem);
   font-weight: 500;
+  margin-bottom: 2rem;
 }
 
 .heroSectionRightBtnCont {
@@ -90,71 +91,246 @@ h1 {
   flex-direction: row;
   flex-wrap: wrap;
   gap: 1rem;
-  padding: 1rem;
+  margin-top: 2rem;
 }
 
 .heroSectionRightBtnCont button {
   cursor: pointer;
-  padding: .9rem 2rem;
+  padding: 0.8rem 1.5rem;
   color: #fff;
   background-color: var(--green);
-  font-size: 1.2rem;
+  font-size: clamp(0.9rem, 1.2vw, 1.2rem);
   font-weight: 600;
   border: 2px solid var(--green);
-  border-radius: .5rem;
-  transition: .3s all ease-in-out;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease-in-out;
+  white-space: nowrap;
 }
 
 .heroSectionRightBtnCont .helpBtn {
   background: #fff;
   color: var(--green);
-  display: flex;
-  justify-content: flex-end;
 }
 
 .heroPhone {
-  height: 300px;
-  width: 260px;
-  justify-content: flex-end;
-  margin-bottom: 0;
+  height: auto;
+  max-height: 300px;
+  width: 100%;
+  max-width: 260px;
   margin-top: auto;
-  transform: translateY(20%);
+  align-self: flex-end;
 }
 
 .heroSectionRightBtnCont button:hover {
   color: #fff;
-  background-color: #AE9B31;
-  border-radius: 2px solid #AE9B31;
+  background-color: var(--gold);
+  border-color: var(--gold);
 }
 
- video {
-  z-index: .9;
-  height: 300px;
+video {
+  position: relative;
   width: 100%;
-  border-radius: 70px;
+  height: 300px;
+  border-radius: 0 0 70px 70px;
   object-fit: cover;
-  transform: translateY(-77%);
+  margin-top: -220px;
+}
+
+/* Медиа-запросы для адаптивности */
+@media (max-width: 1200px) {
+  .HeroSectionContainer {
+    padding: 2rem;
+    padding-top: 3rem;
+  }
+  
+  h1 {
+    font-size: clamp(3rem, 8vw, 8rem);
+  }
+}
+
+@media (max-width: 992px) {
+  .heroSectionLeft, .heroSectionRight {
+    min-width: 250px;
+  }
+  
+  .heroPhone {
+    max-width: 220px;
+  }
 }
 
 @media (max-width: 768px) {
+  .HeroSectionContainer {
+    flex-direction: column;
+    padding: 1.5rem;
+    padding-top: 2rem;
+    border-radius: 40px;
+  }
+  
   h1 {
-    width: 100%;
+    font-size: clamp(2.5rem, 6vw, 6rem);
+    text-align: center;
+    margin: 0.5rem 0;
+  }
+  
+  .heroSectionLeft p {
+    font-size: 1rem;
     text-align: center;
   }
+  
+  .heroSectionLeft h3, 
+  .heroSectionLeftBottom h3 {
+    text-align: center;
+    justify-content: center;
+  }
+  
+  .heroSectionRight {
+    align-items: center;
+    text-align: center;
+    margin-top: 2rem;
+  }
+  
+  .heroSectionRight h3 {
+    text-align: center;
+    font-size: 1.8rem;
+  }
+  
+  .heroSectionRightBtnCont {
+    justify-content: center;
+  }
+  
+  .heroPhone {
+    margin: 2rem auto 0;
+    transform: none;
+  }
+  
+  video {
+    height: 250px;
+    margin-top: -220px;
+    border-radius: 0 0 40px 40px;
+  }
+}
 
+@media (max-width: 480px) {
   .HeroSectionContainer {
-    flex-direction: column; 
-    justify-content: flex-start;
-    align-items: flex-start;
+    padding: 1rem;
+    border-radius: 30px;
+  }
+  
+  h1 {
+    font-size: 3rem;
+  }
+  
+  .heroSectionRightBtnCont {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .heroSectionRightBtnCont button {
+    width: 100%;
+  }
+  
+  .heroPhone {
+    max-width: 180px;
+  }
+  
+  video {
+    height: 200px;
+    margin-top: -230px;
+  }
+}
+
+@media (max-width: 400px) {
+  .HeroSectionContainer {
+    padding: 0.8rem !important; /* Жёсткое уменьшение отступов */
+    margin-left: 0;
+    margin-right: 0;
+    width: 100vw !important; /* Принудительно на всю ширину экрана */
+    transform: translateX(-0.5rem); /* Компенсация оставшихся отступов */
+    border-radius: 20px;
   }
 
+  .heroSectionLeft, 
   .heroSectionRight {
-    align-items: flex-start; 
-    text-align: left; 
+    min-width: 100% !important; /* Занимают всю ширину */
+    padding: 0.5rem !important;
+  }
+
+  h1 {
+    font-size: 2.2rem !important;
+    text-align: center !important;
+    margin-left: -0.5rem; /* Коррекция выравнивания */
   }
 
   .heroPhone {
-    transform: translate(15%, 10%);
-    justify-content: center;
+    max-width: 130px !important;
+    margin: 0 auto !important; /* Центрирование */
+  }
+
+  .heroSectionRight h3 {
+    transform: scale(.9);
+  }
+
+  video {
+    width: 100vw !important; /* На всю ширину экрана */
+    margin-left: -1rem; /* Компенсация оставшихся отступов */
+  }
+}
+
+@media (max-width: 385px) {
+  .HeroSectionContainer {
+    width: 100% !important;
+    max-width: 100vw !important;
+    margin: 0 !important;
+    padding: 0.5rem !important;
+    border-radius: 20px !important;
+    overflow: hidden !important;
+    box-sizing: border-box !important;
+  }
+
+  .heroSectionLeft,
+  .heroSectionRight {
+    width: 100% !important;
+    padding: 0.5rem 0.8rem !important;
+    margin: 0 !important;
+  }
+
+  h1 {
+    font-size: 2rem !important;
+    text-align: center !important;
+    margin: 0 auto !important;
+    transform: none !important;
+    background-position: center !important;
+  }
+
+  .heroSectionRight h3 {
+    font-size: 1.3rem !important;
+    text-align: center !important;
+    margin: 0 auto 1rem !important;
+  }
+
+  .heroPhone {
+    max-width: 120px !important;
+    margin: 0.5rem auto 0 !important;
+    transform: none !important;
+  }
+
+  .heroSectionRightBtnCont {
+    justify-content: center !important;
+    padding: 0 !important;
+    margin: 0 auto !important;
+    gap: 0.5rem !important;
+  }
+
+  .heroSectionRightBtnCont button {
+    width: 100% !important;
+    padding: 0.6rem !important;
+    font-size: 0.8rem !important;
+  }
+
+  video {
+    width: 100vw !important;
+    height: 150px !important;
+    margin-left: calc(-0.5rem - 1px) !important;
+    border-radius: 0 0 20px 20px !important;
   }
 }
