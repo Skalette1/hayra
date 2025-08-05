@@ -3,7 +3,7 @@ import react from "@vitejs/plugin-react";
 
 export default defineConfig({
   plugins: [react()],
-  base: "/online-store--on-ts/", // Важно для GitHub Pages
+  base: "/hayra/", // Важно для GitHub Pages
   build: {
     outDir: "dist", // Папка для билда
   },
