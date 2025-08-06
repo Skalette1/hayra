@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import logo from "../../public/logo (1).svg";
+import logo from "../../../public/logo (1).svg";
 import styles from "./HeroSection.module.css";
 
 export const HeroSection = () => {

@@ -1,0 +1,80 @@
+.footer {
+  font-size: 1.1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem;
+  background-color: #f8f8f8;
+}
+
+.footer p {
+  color: grey;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.footer ul {
+  padding: 0;
+  margin: 0;
+}
+
+.footer ul li {
+  cursor: pointer;
+  margin-top: 1.6rem;
+  list-style: none;
+  margin-bottom: 0.3rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: .3s all ease-in-out;
+}
+
+.footer ul li:hover {
+  text-decoration: underline;
+}
+
+.btnContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.storeBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  padding: 0.7rem .5rem;
+  border-radius: 0.7rem;
+  border: none;
+  font-size: 1.2rem;
+  border: 1px solid #000;
+  color: rgb(0, 0, 0);
+  transition: all 0.3s ease-in-out;
+}
+
+.storeBtn:hover {
+  color: #fff;
+  background-color: #AE9B31;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    gap: 1rem;
+    margin-left: 0.5rem;
+  }
+
+  .footer ul li {
+  margin-top: .8rem;
+  }
+
+  .btnContainer {
+    margin-right: auto;
+  }
+
+  .btnContainer button {
+    margin-top: 0.5rem;
+    transform: scale(1.1);
+  }
+}
