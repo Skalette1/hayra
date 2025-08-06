@@ -136,7 +136,6 @@ video {
   margin-top: -220px;
 }
 
-/* Медиа-запросы для адаптивности */
 @media (max-width: 1200px) {
   .HeroSectionContainer {
     padding: 2rem;
