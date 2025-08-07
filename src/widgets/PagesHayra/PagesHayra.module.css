@@ -1,8 +1,122 @@
 
-.number {
+.PagesHayra {
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 1.1rem;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  padding: 4rem 2rem;
+  padding-left: 7rem;
+  height: 400px;
+  border-radius: 5rem;
+  margin: 3rem 0;
+}
+
+.hayr aside {
+  margin-left: 3rem;
+}
+
+.numberCircle {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid var(--gold);
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--gold);
   display: flex;
   align-items: center;
+  justify-content: center;
+}
+
+.numberText {
+  font-weight: 600;
+  font-size: 1.15rem;
+  color: var(--gold);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.pagesContainer {
+  display: flex;
+  align-items: flex-end;
   gap: 1rem;
+}
+
+.pagesContainer button {
+  cursor: pointer;
+  color: #AE9B31;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 1.2rem;
+  padding: 1rem;
+  width: 180px;
+  height: 200px;
+  border: 2px solid #e9e9e9;
+  border-radius: 1rem;
+  transition: .3s all ease-in-out;
+}
+
+.pagesContainer .btnTop svg:last-child {
+  transform: rotate(-45deg);
+  transition: transform 0.3s ease;
+}
+
+.pagesContainer button:hover .btnTop svg:last-child {
+  transform: rotate(0deg);
+  transition: transform 0.3s ease;
+}
+
+.pagesContainer button:hover {
+  color: #fff;
+  background: linear-gradient(135deg, #4c75a3 0%, #5a87c0 100%);
+}
+
+.pagesContainer button:nth-child(2):hover {
+  background: linear-gradient(135deg, #37aee2 0%, #1e96c8 50%, #007ab8 100%);
+}
+
+.pagesContainer button:nth-child(3):hover {
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
+.str {
+  text-align: center;
+  align-items: center;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.str h2 {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 3rem;
+}
+
+.str p {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 1.3rem;
+}
+
+.btnTop svg {
+  color: #AE9B31;
+  width: 24px;
+  height: 24px;
+  color: inherit;
+  transition: transform 0.3s ease;
+}
+
+.btnTop {
+  display: flex;
+  justify-content: space-around;
+}
+
+.pageButton:hover .btnTop svg {
+  color: white;
+  transform: scale(1.1);
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .number p {
@@ -14,6 +128,64 @@
   align-items: center;
   justify-content: center;
   font-weight: 700;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   color: var(--gold);
 }
+
+@media (max-width: 940px) {
+  .PagesHayra {
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem;
+    height: auto;
+    border-radius: 5rem 5rem 0 0;
+  }
+
+  .number {
+    position: static;
+    transform: none;
+    transform: translateY(200%);
+    margin-bottom: 2.5rem;
+  }
+
+  .number p {
+    width: 40px;
+    height: 40px;
+    font-size: 1.4rem;
+  }
+
+  .str {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .pagesContainer {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 1rem;
+  }
+
+  .pagesContainer button {
+    width: 100%;
+    height: auto;
+    padding: 1rem;
+    font-size: 1rem;
+    gap: 2rem;
+  }
+
+  .pagesContainer button h3 {
+     text-align: left;
+  }
+
+  .btnTop {
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+  }
+
+  .btnTop svg {
+    width: 30px;
+    height: 30px;
+  }
+}
+

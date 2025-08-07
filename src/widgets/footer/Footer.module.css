@@ -62,7 +62,7 @@
   .footer {
     flex-direction: column;
     gap: 1rem;
-    margin-left: 0.5rem;
+    /* margin-left: 0.5rem; */
   }
 
   .footer ul li {

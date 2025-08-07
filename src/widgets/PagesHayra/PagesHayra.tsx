@@ -7,36 +7,40 @@ import styles from "./PagesHayra.module.css"
 export const PagesHayra = () => {
   return (
     <>
+    <div className={styles.hayr}>
+      <aside className={styles.sidebar}>
+        <div className={styles.numberCircle}>6</div>
+        <div className={styles.numberText}>Соцсети</div>
+      </aside>
     <div className={styles.PagesHayra}>
-      <div className={styles.number}>
-        <p>6</p>
-        <span>Акции</span>
-      </div>
+      <div className={styles.str}>
       <h2>Страницы Хайра в социальных сетях</h2>
       <p>Подпишитесь на обновления наших страниц</p>
+      </div>
       <div className={styles.pagesContainer}>
         <button>
           <div className={styles.btnTop}>
             <FaVk />
             <FiArrowRight />
           </div>
-          Вконтакте
+          <h3>Вконтакте</h3>
         </button>
         <button>
           <div className={styles.btnTop}>
             <FaTelegramPlane />
             <FiArrowRight />
           </div>
-          Телеграм
+          <h3>Телеграм</h3>
         </button>
         <button>
           <div className={styles.btnTop}>
             <FaInstagram />
             <FiArrowRight />
           </div>
-          Инстаграмм
+          <h3>Инстаграмм</h3>
         </button>
       </div>
+    </div>
     </div>
     </>
   );

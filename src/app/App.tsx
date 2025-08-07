@@ -3,7 +3,8 @@ import { HeroSection } from '../pages/HeroSection/HeroSection'
 import { HeroSectionContainer } from '../widgets/heroContainer/HeroContainer'
 import { SectionWrap } from '../pages/SectionWrap/SectionWrap'
 import { Footer } from '../widgets/footer/Footer'
-// import { PagesHayra } from '../widgets/PagesHayra/PagesHayra'
+import { PagesHayra } from '../widgets/PagesHayra/PagesHayra'
+import { Interesting } from '../widgets/Interesting/Interesting'
 
 function App() {
   
@@ -13,7 +14,8 @@ function App() {
     <HeroSectionContainer />
     <SectionWrap />
     {/* <NewsBlock/> */}
-    {/* <PagesHayra /> */}
+    <Interesting />
+    <PagesHayra />
     <Footer />
     </>
   )

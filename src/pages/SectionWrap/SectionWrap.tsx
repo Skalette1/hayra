@@ -10,10 +10,10 @@ export const SectionWrap = () => {
       <div className={styles.top}>
         <h2>109 800</h2>
       </div>
-      <div className={styles.number}>
-        <p>1</p>
-        <span>Акции</span>
-      </div>
+      <aside className={styles.sidebar}>
+        <div className={styles.numberCircle}>1</div>
+        <div className={styles.numberText}>Акции</div>
+      </aside>
       <div className={styles.bottom}>
         <div className={styles.imgContainer}>
         <img src={volunteers} alt="volunteers" className={styles.volunteers}/>

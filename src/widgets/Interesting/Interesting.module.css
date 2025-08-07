@@ -1,0 +1,307 @@
+:root {
+  --gold: #AE9B31;
+  --green-dark: #01753D;
+  --green-light: #3CA14E;
+  --white: #fff;
+}
+
+.interesting {
+  display: flex;
+  background-color: var(--green-dark);
+  color: var(--white);
+  /* border-radius: 0 0 2rem 2rem; */
+  padding: 3rem 2rem;
+  margin: 4rem 0;
+  gap: 3rem;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  position: relative;
+}
+
+.sidebar {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+  min-width: 80px;
+}
+
+.numberCircle {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid var(--gold);
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.numberText {
+  font-weight: 600;
+  font-size: 1.15rem;
+  color: var(--gold);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.header h2 {
+  font-size: 2.8rem;
+  margin-bottom: 0.3rem;
+  font-weight: 700;
+}
+
+.header p {
+  font-size: 1.3rem;
+  color: #d1e6ca;
+  max-width: 480px;
+}
+
+.swiper {
+  width: 100%;
+  max-width: 600px;
+}
+
+.slideButton {
+  background: var(--green-light);
+  border-radius: 1.5rem;
+  border: none;
+  padding: 2rem 2.5rem;
+  width: 100%;
+  height: 220px;
+  color: #e8d257;
+  font-weight: 700;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  text-align: left;
+}
+
+.slideButton:hover {
+  background: var(--gold);
+  color: var(--white);
+}
+
+.icons {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.icons svg {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.slideButton:hover .icons svg {
+  color: var(--white);
+  transform: scale(1.2);
+}
+
+.arrow {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--gold);
+  transition: color 0.3s ease;
+}
+
+.slideButton:hover .arrow {
+  color: var(--white);
+}
+
+/* Убираем пагинацию */
+.swiper-pagination {
+  display: none !important;
+}
+
+/* Кастомные стрелки */
+.navButton {
+  position: absolute;
+  bottom: 10%;
+  transform: translateY(50%);
+  background-color: inherit;
+  color: var(--gold);
+  width: 50px;
+  height: 50px;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 10;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+}
+
+.navButton1,
+.navButton2 {
+  background-color: inherit;
+  border: none;
+}
+
+.navButton:hover {
+  background-color: var(--gold);
+  color: var(--white);
+}
+
+.swiper-button-next {
+  margin-right: 7rem !important;
+  display: none !important;
+}
+
+.swiper-button-prev {
+  margin-left: 2rem !important;
+  display: none;
+}
+
+.navButtonsWrapper {
+  display: flex;
+  justify-content: center;
+  gap: 2rem; /* расстояние между кнопками */
+  margin-top: 1.5rem; /* отступ сверху, чтобы кнопки были ниже */
+}
+
+.navButton {
+  background-color: transparent;
+  border: 2px solid var(--gold);
+  color: var(--gold);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-size: 2rem;
+}
+
+.navButton:hover {
+  background-color: var(--gold);
+  color: var(--white);
+}
+
+@media (max-width: 900px) {
+  .interesting {
+    flex-direction: column;
+    padding: 2rem 1rem;
+    align-items: stretch;
+  }
+
+  .sidebar {
+    flex-direction: row;
+    justify-content: center;
+    gap: 1.5rem;
+    min-width: 100%;
+  }
+
+  .numberCircle {
+    width: 60px;
+    height: 60px;
+    font-size: 2rem;
+  }
+
+  .numberText {
+    font-size: 1rem;
+    text-align: center;
+    max-width: 80px;
+  }
+
+  .content {
+    width: 100%;
+  }
+
+  .header {
+    background-color: var(--green-dark);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header h2,
+  .header p {
+    text-align: center;
+    padding: 0 1rem;
+    word-wrap: break-word;
+  }
+
+  .header h2 {
+    font-size: 1.4rem;
+  }
+
+  .header p {
+    font-size: 1rem;
+  }
+
+  .swiper {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto !important;
+    box-sizing: border-box;
+    padding: 1rem;
+  }
+
+  .slideButton {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 1.2rem 1rem;
+    font-size: 1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+  }
+
+  .slideButton .icons {
+    font-size: 1.6rem;
+  }
+
+  .slideButton:hover .icons svg {
+    color: var(--white) !important;
+  }
+
+  .navButton1,
+  .navButton2 {
+    position: relative;
+    margin: 1rem 0.5rem 0;
+    transform: none;
+    width: 44px;
+    height: 44px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .navWrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 920px) and (min-width: 766px) {
+  .interesting {
+    width: 112vw;
+    box-sizing: border-box;
+  }
+}
