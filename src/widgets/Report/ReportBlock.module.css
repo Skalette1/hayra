@@ -1,0 +1,133 @@
+.ReportContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.numberCircle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 3px solid var(--gold);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.numberText {
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-top: 0.5rem;
+  letter-spacing: 0.05em;
+}
+
+.reportInfo {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.reportInfo h2 {
+  font-size: var(--font-size-title);
+  font-weight: 700;
+  color: #222;
+}
+
+.reportInfo p {
+  font-size: var(--font-size-subtitle);
+  color: #666;
+}
+
+.Report {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.reportBlock {
+  background: #fff;
+  border-radius: 2rem;
+  border: 2px solid #eee;
+  padding: 1.5rem;
+  width: 300px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.reportBlock:hover {
+  transform: translateY(-5px);
+}
+
+.reportBlock img {
+  width: 220px;
+  height: 220px;
+  border-radius: 2rem;
+  object-fit: cover;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.2);
+  margin-bottom: 1rem;
+}
+
+.reportBottom {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.reportMiniBlock {
+  font-size: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  font-size: var(--font-size-subtitle);
+  font-weight: 600;
+}
+
+.arrow {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.arrow:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .ReportContainer {
+    padding: 1rem;
+  }
+
+  .reportBlock {
+    width: 90%;
+  }
+
+  .reportBlock img {
+    width: 100%;
+    height: auto;
+  }
+
+  .reportBottom {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .arrow {
+    width: 36px;
+    height: 36px;
+  }
+}

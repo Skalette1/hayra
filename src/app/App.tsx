@@ -5,6 +5,8 @@ import { SectionWrap } from '../pages/SectionWrap/SectionWrap'
 import { Footer } from '../widgets/footer/Footer'
 import { PagesHayra } from '../widgets/PagesHayra/PagesHayra'
 import { Interesting } from '../widgets/Interesting/Interesting'
+import { ReportBlock } from '../widgets/Report/ReportBlock'
+import { Support } from '../widgets/Support/Support'
 
 function App() {
   
@@ -14,8 +16,10 @@ function App() {
     <HeroSectionContainer />
     <SectionWrap />
     {/* <NewsBlock/> */}
+    <ReportBlock />
     <Interesting />
     <PagesHayra />
+    <Support />
     <Footer />
     </>
   )

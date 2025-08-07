@@ -9,7 +9,6 @@
   display: flex;
   background-color: var(--green-dark);
   color: var(--white);
-  /* border-radius: 0 0 2rem 2rem; */
   padding: 3rem 2rem;
   margin: 4rem 0;
   gap: 3rem;
@@ -62,9 +61,9 @@
 }
 
 .header p {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   color: #d1e6ca;
-  max-width: 480px;
+  max-width: 400px;
 }
 
 .swiper {
@@ -121,12 +120,10 @@
   color: var(--white);
 }
 
-/* Убираем пагинацию */
 .swiper-pagination {
   display: none !important;
 }
 
-/* Кастомные стрелки */
 .navButton {
   position: absolute;
   bottom: 10%;
@@ -169,8 +166,8 @@
 .navButtonsWrapper {
   display: flex;
   justify-content: center;
-  gap: 2rem; /* расстояние между кнопками */
-  margin-top: 1.5rem; /* отступ сверху, чтобы кнопки были ниже */
+  gap: 2rem; 
+  margin-top: 1.5rem;
 }
 
 .navButton {
@@ -241,7 +238,7 @@
   }
 
   .header p {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 
   .swiper {
@@ -301,7 +298,7 @@
 
 @media (max-width: 920px) and (min-width: 766px) {
   .interesting {
-    width: 112vw;
+    width: 100vw;
     box-sizing: border-box;
   }
 }
