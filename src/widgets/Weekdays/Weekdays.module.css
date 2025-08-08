@@ -1,0 +1,140 @@
+
+
+.wrapper {
+  color: #fff;
+  margin: 6rem 0;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.7rem;
+  overflow: auto;
+    overflow-x: auto;
+  overflow-y: hidden;
+  flex-wrap: nowrap;
+}
+
+.card {
+  cursor: pointer;
+    width: 420px;
+    height: 500px;
+      position: relative;
+  overflow: hidden;
+    /* padding: 40px 0; */
+    background-color: rgba(255, 255, 255, 0.2);
+    color: var(--white-txt-clr);
+    border-radius: 30px;
+    /* transition: all 2.6s ease; */
+    backdrop-filter: blur(6px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 0 0 auto;
+    overflow-y: hidden;
+}
+
+
+.infoCard {
+    display: flex;
+    flex-direction: column;
+    transform: translateY(22.8rem);
+    width: 100%;
+    transition: .8s all ease;
+    color: #fff;
+    font-weight: 800;
+    font-size: 1.5rem;
+    border-radius: 50px;
+}
+
+.cardTextTop {
+  font-size: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-top: .4rem;
+    padding: 1rem;
+    margin: 1.3rem 0;
+    backdrop-filter: blur(9px);
+    border-radius: 30px;
+}
+
+.levo {
+    display: flex;
+    flex-direction: column;
+    padding: 0.7rem;
+    margin: .4rem .7rem;
+}
+
+.hiddenText {
+    opacity: 0;
+    margin-top: 1.3rem;
+    padding-left: .5rem;
+    font-size: 1.3rem;
+}
+
+.hiddenText button {
+    border-radius: 4px;
+    padding: .6rem;
+    color: #ffffff;
+    background: var(--button);
+    border: 1px solid var(--button);
+    font-size: 1.2rem;
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-inline: auto;
+}
+
+.card:hover .infoCard {
+    transform: translateY(0);
+    height: 100%;
+    backdrop-filter: blur(9px);
+    border-radius: 30px;
+}
+
+.card:hover .hiddenText {
+    opacity: 1;
+}
+
+.card:hover {
+    backdrop-filter: blur(9px);
+    border-radius: 30px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.infoCard button:hover {
+    transition: .6s all ease;
+    text-align: center;
+    border-radius: 4px;
+    color: var(--button);
+    background: #fff;
+    border: 1px solid var(--button);
+}
+
+.card1, .card2, .card3 {
+    background-position: center;
+    background-size: cover;
+    width: 400px;
+    height: 470px;
+    border-radius: 37px;
+    position: relative;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.4); 
+  z-index: 0;
+  border-radius: 30px;
+}
+
+.infoCard {
+  position: relative;
+  z-index: 1; /* чтобы текст был поверх оверлея */
+}
+
+.infoCard, .infoCard span, .hiddenText p {
+  text-shadow: 0 0 6px rgba(0,0,0,0.7);
+}

@@ -51,8 +51,11 @@ export const Support = () => {
       <div className={styles.cards}>
         {blocks.map((block, idx) => (
           <div className={styles.card} key={idx}>
-            <div className={styles.icon}>{block.icon}</div>
-            <img src={block.image} alt={block.title} />
+            <div className={styles.icon}>
+              {block.icon}
+              <FiArrowRight className={styles.iconArrow} />
+            </div>
+            <img src={block.image} alt={block.title}/>
             <h3>{block.title}</h3>
             <button className={styles.cta}>
               Подробнее <FiArrowRight />
