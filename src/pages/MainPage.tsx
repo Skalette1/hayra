@@ -8,6 +8,7 @@ import { Interesting } from '../widgets/Interesting/Interesting'
 import { ReportBlock } from '../widgets/Report/ReportBlock'
 import { Support } from '../widgets/Support/Support'
 import { Weekdays } from '../widgets/Weekdays/Weekdays'
+import Map from '../widgets/Map/Map'
 
 export const MainPage = () => {
   
@@ -21,6 +22,7 @@ export const MainPage = () => {
     <Interesting />
     <PagesHayra />
     <Support />
+    <Map />
     <Footer />
     </>
   )

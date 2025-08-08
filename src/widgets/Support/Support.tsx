@@ -39,7 +39,7 @@ export const Support = () => {
   return (
     <section className={styles.supportWrapper}>
       <aside className={styles.sidebar}>
-        <div className={styles.numberCircle}>7</div>
+        <div className={styles.numberCircle}>6</div>
         <div className={styles.numberText}>Поддержка</div>
       </aside>
 

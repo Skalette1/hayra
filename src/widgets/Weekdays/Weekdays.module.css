@@ -185,3 +185,9 @@
   display: flex;
   gap: 2rem;
 }
+
+@media(max-width: 480px) {
+  .wrapper {
+    border-radius: .5rem;
+  }
+}

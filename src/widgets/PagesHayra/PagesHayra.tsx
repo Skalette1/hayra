@@ -9,7 +9,7 @@ export const PagesHayra = () => {
     <>
     <div className={styles.hayr}>
       <aside className={styles.sidebar}>
-        <div className={styles.numberCircle}>6</div>
+        <div className={styles.numberCircle}>5</div>
         <div className={styles.numberText}>Соцсети</div>
       </aside>
     <div className={styles.PagesHayra}>
