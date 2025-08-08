@@ -13,7 +13,7 @@ const houseIcon = new L.Icon({
 
 const markers = [
   { id: 1, lat: 43.32, lng: 45.69, text: 'Английский замок' },
-  { id: 2, lat: 43.31, lng: 45.70, text: 'Английский замок' },
+  { id: 2, lat: 43.31, lng: 45.70, text: 'Грозный Молл' },
 ];
 
 export default function Map() {
