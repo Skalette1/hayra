@@ -71,7 +71,22 @@ export const HeroSection = () => {
     <header className={styles.header}>
       <img src={logo} alt="logo" />
 
-      <div className={styles.controls}>
+
+
+      <nav className={menuOpen ? `${styles.open}` : ""}>
+        <ul>
+          <li>Кто мы</li>
+          <li>Чем мы занимаемся</li>
+          <li>Контакты</li>
+          {isMobile && (
+            <>
+              <li>Финансовый отчет</li>
+              <li>Официальные документы</li>
+            </>
+          )}
+        </ul>
+      </nav>
+            <div className={styles.controls}>
         <button
           className={styles.themeToggle}
           onClick={toggleTheme}
@@ -93,21 +108,6 @@ export const HeroSection = () => {
           <span className={styles.burgerLine}></span>
         </button>
       </div>
-
-
-      <nav className={menuOpen ? `${styles.open}` : ""}>
-        <ul>
-          <li>Кто мы</li>
-          <li>Чем мы занимаемся</li>
-          <li>Контакты</li>
-          {isMobile && (
-            <>
-              <li>Финансовый отчет</li>
-              <li>Официальные документы</li>
-            </>
-          )}
-        </ul>
-      </nav>
     </header>
   );
 };

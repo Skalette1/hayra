@@ -17,13 +17,11 @@ body {
   color: #0f0f0f;
 }
 
-/* Global dark mode using invert trick */
 html.dark {
   color-scheme: dark;
   filter: invert(1) hue-rotate(180deg);
 }
 
-/* Revert media so images/videos look natural in dark mode */
 html.dark img,
 html.dark picture,
 html.dark video,
@@ -32,7 +30,6 @@ html.dark svg {
   filter: invert(1) hue-rotate(180deg);
 }
 
-/* Keep Leaflet map tiles dark while in dark mode */
 html.dark .leaflet-container {
   background: #0e0e0e;
 }

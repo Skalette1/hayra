@@ -2,8 +2,8 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.tsx'
-
-// Initialize theme early to avoid FOUC
+import { RouterProvider } from 'react-router-dom'
+import { router } from './router/Router.tsx'
 const savedTheme = localStorage.getItem('theme') as 'light' | 'dark' | null
 if (savedTheme === 'dark') {
   document.documentElement.classList.add('dark')
@@ -12,7 +12,5 @@ if (savedTheme === 'dark') {
 }
 
 createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
+  <RouterProvider router={router} />
 )
