@@ -136,6 +136,16 @@ video {
   margin-top: -220px;
 }
 
+.heroSectionRightBtnCont a {
+  all: unset; /* Сброс стандартных стилей ссылки */
+  color: inherit; /* Цвет как у родителя */
+  text-decoration: none; /* Без подчёркивания */
+  display: inline-block; /* Чтобы кнопка нормально работала */
+  width: 100%; /* Если кнопка на всю ширину */
+  height: 100%;
+}
+
+
 @media (max-width: 1200px) {
   .HeroSectionContainer {
     padding: 2rem;

@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import logo from "../../../public/logo (1).svg";
 import styles from "./HeroSection.module.css";
-
+import { Link } from "react-router-dom";
 const LampIcon = ({ on }: { on: boolean }) => (
   <svg
     viewBox="0 0 24 24"
@@ -9,17 +9,12 @@ const LampIcon = ({ on }: { on: boolean }) => (
     aria-hidden="true"
     className={styles.lampIcon}
   >
-    {/* hook/loop */}
+  
     <path d="M12 2c1.5 0 2.5 1.2 2.5 2.2 0 .6-.3 1.1-.7 1.5" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-    {/* short ring */}
     <path d="M12 5.7v2.1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-    {/* cap */}
     <path d="M9.5 8.2h5a.8.8 0 0 1 .8.8v.6H8.7V9a.8.8 0 0 1 .8-.8Z" fill="currentColor" />
-    {/* shade */}
     <path d="M7 10h10l-2 5H9l-2-5Z" fill="currentColor" />
-    {/* bulb */}
     <circle cx="12" cy="15.3" r="1.4" fill={on ? "#FFD54D" : "none"} stroke={on ? "#FFD54D" : "currentColor"} strokeWidth="1.2" />
-    {/* subtle glow when on */}
     {on && (
       <g opacity="0.5">
         <path d="M6 16.5h12" stroke="#FFD54D" strokeWidth="1.2" strokeLinecap="round" />
@@ -62,14 +57,15 @@ export const HeroSection = () => {
       root.classList.remove('dark');
       localStorage.setItem('theme', 'light');
     }
-    // trigger swing animation
     setIsSwinging(true);
     window.setTimeout(() => setIsSwinging(false), 650);
   };
 
   return (
     <header className={styles.header}>
+      <Link to="/">
       <img src={logo} alt="logo" />
+      </Link>
 
 
 

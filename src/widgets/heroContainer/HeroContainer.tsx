@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./HeroContainer.module.css"
 import phone from "../../../public/phone.png"
 import video from "../../../public/IMG_1411.MP4"
-
+import { Link } from "react-router-dom";
 export const HeroSectionContainer = () => {
   return (
     <>
@@ -18,8 +18,8 @@ export const HeroSectionContainer = () => {
       <div className="">
       <h3 style={{fontSize: "4rem"}}>#доброрядом</h3>
       <div className={styles.heroSectionRightBtnCont}>
-  <button className={styles.supportBtn}>Поддержать проект</button>
-  <button className={styles.helpBtn}>Получить помощь</button>
+  <button className={styles.supportBtn}><Link to={"/planted"}>Поддержать проект</Link></button>
+  <button className={styles.helpBtn}><Link to="/getHelp">Получить помощь</Link></button>
 </div>
       </div>
 <img src={phone} alt="phone" className={styles.heroPhone}/>
