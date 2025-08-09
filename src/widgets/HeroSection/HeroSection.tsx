@@ -64,10 +64,8 @@ export const HeroSection = () => {
   return (
     <header className={styles.header}>
       <Link to="/">
-      <img src={logo} alt="logo" />
+      <img src={logo} alt="logo" style={{cursor: "pointer"}}/>
       </Link>
-
-
 
       <nav className={menuOpen ? `${styles.open}` : ""}>
         <ul>

@@ -4,6 +4,7 @@ import report2 from "../../../public/reports-2.png"
 import report3 from "../../../public/reports-3.png"
 import styles from "./ReportBlock.module.css"
 import { ArrowInSquare } from "../../share/components/NextArrow";
+import { Link } from "react-router-dom";
 
 export const ReportBlock = () => {
   return (
@@ -25,6 +26,7 @@ export const ReportBlock = () => {
         <p>Отчет</p>
         <h5>2024</h5>
       </div>
+      <Link to="/financialreport">
         <svg
   className={styles.arrow}
     width="50"
@@ -54,6 +56,7 @@ export const ReportBlock = () => {
       strokeLinejoin="round"
     />
   </svg>
+      </Link>
     </div>
     </div>
     <div className={styles.reportBlock}>
@@ -63,6 +66,7 @@ export const ReportBlock = () => {
         <p>Отчет</p>
         <h5>2023</h5>
       </div>
+      <Link to="/financialreport">
         <svg
   className={styles.arrow}
     width="50"
@@ -92,6 +96,7 @@ export const ReportBlock = () => {
       strokeLinejoin="round"
     />
   </svg>
+      </Link>
     </div>
     </div>
     <div className={styles.reportBlock}>
@@ -101,6 +106,7 @@ export const ReportBlock = () => {
         <p>Отчет</p>
         <h5>2022</h5>
       </div>
+      <Link to="/financialreport">
         <svg
   className={styles.arrow}
     width="50"
@@ -130,6 +136,7 @@ export const ReportBlock = () => {
       strokeLinejoin="round"
     />
   </svg>
+      </Link>
     </div>
     </div>
     </div>

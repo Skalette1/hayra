@@ -11,28 +11,33 @@ import {
   FiArrowRight
 } from "react-icons/fi";
 import { GiTreeBranch } from "react-icons/gi";
+import { Link } from "react-router-dom";
 
 export const Support = () => {
   const blocks = [
     {
       icon: <FiDollarSign />,
-      title: "Финансовая поддержка",
+      title: "Финансы",
       image: support1,
+      to: "/support/finance",
     },
     {
       icon: <FiUserPlus />,
       title: "Станьте донором",
       image: support2,
+      to: "/support/BeDonor",
     },
     {
       icon: <GiTreeBranch />,
       title: `Проект "Дерево в Раю"`,
       image: support4,
+      to: "/support/tree",
     },
     {
       icon: <FiUsers />,
       title: `Стать волонтером`,
       image: support5,
+      to: "/support/volunteer",
     },
   ];
 
@@ -55,11 +60,11 @@ export const Support = () => {
               {block.icon}
               <FiArrowRight className={styles.iconArrow} />
             </div>
-            <img src={block.image} alt={block.title}/>
+            <img src={block.image} alt={block.title} />
             <h3>{block.title}</h3>
-            <button className={styles.cta}>
+            <Link to={block.to} className={styles.cta}>
               Подробнее <FiArrowRight />
-            </button>
+            </Link>
           </div>
         ))}
       </div>

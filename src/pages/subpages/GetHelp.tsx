@@ -22,7 +22,7 @@ export const GetHelp = () => {
 
 Если Вам нужна помощь, напишите нам. Диспетчер проинформирует Вас обо всем.
         </p>
-        <a href="https://wa.me/79388944793" target="_blank">Написать в WhatsApp</a>
+        <a href="https://wa.me/79232977783" target="_blank">Написать в WhatsApp</a>
 
       </div>
       <Footer />

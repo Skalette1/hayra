@@ -19,6 +19,20 @@
   -webkit-overflow-scrolling: touch;
 }
 
+.sidebar {
+  position: sticky;
+  top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .5rem;
+}
+
+.sidebar .numberCircle,
+.sidebar .numberText {
+  position: static;
+}
+
 .wrapper::-webkit-scrollbar {
   height: 8px;
 }

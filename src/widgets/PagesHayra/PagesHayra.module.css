@@ -1,6 +1,5 @@
-
 .PagesHayra {
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: 1.1rem;
   background-color: #fff;
   display: flex;
@@ -84,7 +83,7 @@
 .str {
   text-align: center;
   align-items: center;
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -175,7 +174,7 @@
   }
 
   .pagesContainer button h3 {
-     text-align: left;
+    text-align: left;
   }
 
   .btnTop {
@@ -188,4 +187,3 @@
     height: 30px;
   }
 }
-

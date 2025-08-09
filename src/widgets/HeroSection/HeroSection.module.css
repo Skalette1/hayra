@@ -19,6 +19,8 @@ nav ul {
 }
 
 nav ul li {
+  width: max-content;
+  margin-right: 1rem;
   cursor: pointer;
   transition: 0.5s all ease-in-out;
 }

@@ -1,4 +1,3 @@
-
 :root {
   --green: #01753D;
   --gold: #AE9B31;
@@ -11,6 +10,7 @@
   flex-direction: column;
   align-items: center;
   margin-left: 7rem;
+
 }
 
 .top h2 {
@@ -64,7 +64,7 @@
   color: #000;
   cursor: pointer;
   font-size: 1.2rem;
-  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-weight: 600;
   border: 2px solid #000;
   border-radius: .7rem;
@@ -117,7 +117,7 @@
   }
 
   .top {
-    order: -1; 
+    order: -1;
     width: 100%;
     margin-bottom: 0.5rem;
   }
@@ -131,7 +131,7 @@
   .number {
     position: static;
     margin-bottom: 4rem;
-    order: -2; 
+    order: -2;
   }
 
   .number p {

@@ -1,4 +1,5 @@
 import React, { useRef, useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -10,11 +11,11 @@ import { ArrowInSquare } from "../../share/components/NextArrow";
 import { ArrowLeftInSquare } from "../../share/components/PrevArrow";
 
 const items = [
-  "ДОБРО — ЭТО СИЛА, КОТОРУЮ МЫ СОЗДАЁМ ВМЕСТЕ",
-  "КАК ОДИН ПОСТ МОЖЕТ ИЗМЕНИТЬ ЧЬЮ-ТО СУДЬБУ",
-  "СТАНЬ ГЕРОЕМ — ПРИСОЕДИНЯЙСЯ К «ХАЙРУ»",
-  "МАЛЕНЬКОЕ ДЕЛО — БОЛЬШОЙ РЕЗУЛЬТАТ",
-  "ТВОЁ ВРЕМЯ — ЧЬЯ-ТО НАДЕЖДА",
+  { text: "ТЕПЕРЬ ДОБРА БУДЕТ ЕЩЕ БОЛЬШЕ", to: "/placeholder-1" },
+  { text: "КТО МЕШАЕТ СДЕЛАТЬ ДОБРОЕ ДЕЛО?", to: "/placeholder-2" },
+  { text: "СТАНЬ ГЕРОЕМ — ПРИСОЕДИНЯЙСЯ К «ХАЙРУ»", to: "/placeholder-3" },
+  { text: "НАДЕЖДА ЕСТЬ ДО ТЕХ ПОР, ПОКА ЕСТЬ ОТЗЫВЧИВЫЕ ЛЮДИ", to: "/placeholder-4" },
+  { text: "ТВОЁ ВРЕМЯ — ЧЬЯ-ТО НАДЕЖДА", to: "/placeholder-5" },
 ];
 
 export const Interesting = () => {
@@ -63,14 +64,16 @@ export const Interesting = () => {
           onSwiper={setSwiperInstance}
           className={styles.swiper}
         >
-          {items.map((text, idx) => (
+          {items.map((item, idx) => (
             <SwiperSlide key={idx}>
-              <button className={styles.slideButton} type="button">
-                <div className={styles.icons}>
-                  <FiGlobe size={28} />
-                </div>
-                <h3>{text}</h3>
-              </button>
+              <Link to={item.to}>
+                <button className={styles.slideButton} type="button">
+                  <div className={styles.icons}>
+                    <FiGlobe size={28} />
+                  </div>
+                  <h3>{item.text}</h3>
+                </button>
+              </Link>
             </SwiperSlide>
           ))}
         </Swiper>

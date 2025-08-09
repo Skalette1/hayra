@@ -1,8 +1,7 @@
-
 .pageBlock {
   padding: 2rem;
   background-color: #fff;
-  height: 70vh;
+  min-height: 70vh;
   border-radius: 5rem 5rem 0 0;
   display: flex;
   flex-direction: column;
@@ -10,7 +9,8 @@
   text-align: center;
 }
 
-.pageBlock h2 {
+.pageBlock h2,
+.pageBlock h3 {
   margin: 0 auto;
   display: flex;
   justify-content: center;
@@ -36,4 +36,12 @@
   color: #4169E1;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: 1.3rem;
+}
+
+.finince {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin: 2rem;
 }

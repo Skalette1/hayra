@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./SectionWrap.module.css"
 import volunteers from "../../../public/stock.png"
 import apple from "../../../public/dbTYauJAAy2qpgArT1Aonlg8aKxdOvOY-DjTNjeQsyl6DkoWxCrRnuK3aS-jTcKSbRT6uGfu.jpg"
+import { Link } from "react-router-dom";
 
 export const SectionWrap = () => {
   return (
@@ -22,7 +23,7 @@ export const SectionWrap = () => {
         <div className={styles.bottomRight}>
           <h3>деревьев посажено</h3>
           <p>В рамках проекта Дерево в Раю</p>
-          <button>Подробнее про акцию</button>
+          <button><Link to={"/morepromotion"}>Поддержать проект</Link></button>
         </div>
       </div>
     </div>
