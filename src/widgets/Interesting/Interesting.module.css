@@ -12,7 +12,7 @@
   padding: 3rem 2rem;
   margin: 4rem 0;
   gap: 3rem;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: var(--font-main);
   position: relative;
 }
 
@@ -36,6 +36,10 @@
   letter-spacing: 0.05em;
   text-transform: uppercase;
 }
+
+/* :global(html.dark) .interesting {
+  background-color: #71f5aa; 
+} */
 
 .sidebar {
   display: flex;
@@ -163,7 +167,7 @@
 .navButtonsWrapper {
   display: flex;
   justify-content: center;
-  gap: 2rem; 
+  gap: 2rem;
   margin-top: 1.5rem;
 }
 

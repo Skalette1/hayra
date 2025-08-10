@@ -218,3 +218,8 @@
     border-radius: .5rem;
   }
 }
+
+:global(html.dark) .wrapper {
+  color: #fff;
+  background-color: rgb(236, 236, 236);
+}

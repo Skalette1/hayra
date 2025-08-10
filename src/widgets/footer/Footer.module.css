@@ -78,3 +78,7 @@
     transform: scale(1.1);
   }
 }
+
+:global(html.dark) footer {
+  background-color: #f0efef; 
+}

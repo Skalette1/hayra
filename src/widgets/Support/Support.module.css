@@ -247,3 +247,11 @@
 .cta:hover {
   background: #01753D;
 }
+
+:global(html.dark) .supportWrapper {
+  background-color: #f0efef; 
+}
+
+:global(html.dark) .card {
+  background-color: #f0efef; 
+}

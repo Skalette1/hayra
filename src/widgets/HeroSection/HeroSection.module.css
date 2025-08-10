@@ -11,7 +11,7 @@ nav ul {
   display: flex;
   gap: 1.5rem;
   list-style: none;
-  font-family: "Golos";
+  font-family: var(--font-main);
   font-size: 1.3rem;
   font-weight: 500;
   margin: 0;

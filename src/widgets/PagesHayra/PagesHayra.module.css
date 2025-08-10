@@ -1,5 +1,5 @@
 .PagesHayra {
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: var(--font-main);
   font-size: 1.1rem;
   background-color: #fff;
   display: flex;
@@ -83,19 +83,19 @@
 .str {
   text-align: center;
   align-items: center;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: var(--font-main);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
 .str h2 {
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: var(--font-main);
   font-size: 3rem;
 }
 
 .str p {
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: var(--font-main);
   font-size: 1.3rem;
 }
 
@@ -186,4 +186,12 @@
     width: 30px;
     height: 30px;
   }
+}
+
+:global(html.dark) .PagesHayra {
+  background-color: #f0efef; 
+}
+
+:global(html.dark) .pagesContainer button{
+  background-color: #f4f3f3; 
 }

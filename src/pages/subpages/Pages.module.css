@@ -34,7 +34,7 @@
 
 .pageBlock a {
   color: #4169E1;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: var(--font-main);
   font-size: 1.3rem;
 }
 
