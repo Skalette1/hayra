@@ -9,7 +9,6 @@
 }
 
 .numberCircle {
-  margin: 3rem ;
   width: 70px;
   height: 70px;
   border-radius: 50%;
@@ -23,7 +22,6 @@
 }
 
 .numberText {
-  margin: 3rem ;
   font-weight: 600;
   font-size: 1.15rem;
   color: var(--gold);

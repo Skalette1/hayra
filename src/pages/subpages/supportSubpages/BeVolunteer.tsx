@@ -1,9 +1,11 @@
+import { ScrollToTop } from '../../../share/components/ScrollToTop'
 import { Footer } from '../../../widgets/footer/Footer'
 import { HeroSection } from "../../../widgets/HeroSection/HeroSection"
 import styles from "../Pages.module.css"
 export const BeVolunteer = () => {
   return (
     <>
+    <ScrollToTop />
       <HeroSection />
       <div className={styles.pageBlock}>
         <h3 style={{ fontSize: "2rem" }}>Стать партнером</h3>

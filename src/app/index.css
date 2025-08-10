@@ -37,3 +37,7 @@ html.dark .leaflet-container {
 html.dark .leaflet-container .leaflet-tile {
   filter: none !important;
 }
+
+a {
+  cursor: pointer;
+}

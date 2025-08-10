@@ -6,6 +6,7 @@ import { HeroSection } from '../../widgets/HeroSection/HeroSection';
 import { Footer } from '../../widgets/footer/Footer';
 import PieChart from '../../share/components/Pie';
 import styles from "./Pages.module.css"
+import { ScrollToTop } from '../../share/components/ScrollToTop';
 
 const lineData = [
   { year: '2019', expenses: 4 },
@@ -19,6 +20,7 @@ const lineData = [
 const FinancialReport: React.FC = () => {
   return (
     <div style={{ fontFamily: 'Arial, sans-serif' }}>
+      <ScrollToTop />
       <HeroSection />
       <div className={styles.pageBlock}>
         
