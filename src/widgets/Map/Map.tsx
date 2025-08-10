@@ -18,7 +18,7 @@ const markers = [
 
 export default function Map() {
   return (
-    <>
+    <div className={styles.mapContainer}>
       <style>{`
         .leaflet-control-attribution {
           display: none !important;
@@ -45,6 +45,6 @@ export default function Map() {
           ))}
         </MapContainer>
       </div>
-    </>
+    </div>
   );
 }

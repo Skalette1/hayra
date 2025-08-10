@@ -3,6 +3,9 @@
   display: none !important;
 }
 
+.mapContainer aside {
+  margin: 2rem;
+}
 .mapWrapper {
   width: 70%;
   margin: 3rem auto;

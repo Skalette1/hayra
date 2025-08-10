@@ -1,3 +1,4 @@
+
 .ReportContainer {
   display: flex;
   flex-direction: column;
@@ -107,11 +108,17 @@
 }
 
 .reportMiniBlock {
+  color: var(--gold);
   font-size: 1.4rem;
   display: flex;
   flex-direction: column;
-  font-size: var(--font-size-subtitle);
+  font-size: 1.5rem;
   font-weight: 600;
+}
+
+.reportMiniBlock p, 
+.reportMiniBlock h5 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .arrow {
@@ -146,4 +153,33 @@
     width: 36px;
     height: 36px;
   }
+}
+
+.reportBottom svg {
+  margin-left: auto !important;
+  display: inline-flex;
+  fill: none; /* убрать заливку */
+  border: 2px solid var(--gold); /* добавить рамку */
+  border-radius: 6px; /* скругление углов, как было у rx=6 */
+  box-sizing: border-box;
+  background-color: transparent; /* на всякий случай */
+  width: 50px;
+  height: 50px;
+  transform: translateY(5px);
+}
+
+.reportBottom rect {
+  fill: transparent !important; /* убрать заливку у прямоугольника */
+}
+
+.reportBottom path {
+  stroke: var(--gold); /* стрелки теперь тоже золотые */
+}
+
+.arrow:hover {
+  background-color: var(--gold);
+}
+
+.arrow:hover path {
+  stroke: white; /* стрелка на ховере белая */
 }
