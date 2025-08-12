@@ -17,12 +17,27 @@ function useQueryParam(name: string): string {
 export default function SearchResults() {
   const initialQ = useQueryParam('q');
   const [query, setQuery] = useState(initialQ);
+  const [isDark, setIsDark] = useState<boolean>(
+    typeof window !== 'undefined'
+      ? document.documentElement.classList.contains('dark')
+      : false
+  );
 
   useEffect(() => {
     setQuery(initialQ);
   }, [initialQ]);
 
+  useEffect(() => {
+    const observer = new MutationObserver(() => {
+      setIsDark(document.documentElement.classList.contains('dark'));
+    });
+    observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
+    return () => observer.disconnect();
+  }, []);
+
   const results = useMemo(() => searchItems(query), [query]);
+  const descriptionColor = isDark ? '#fff' : '#555';
+  const metaColor = isDark ? '#fff' : '#666';
 
   return (
     <>
@@ -30,16 +45,18 @@ export default function SearchResults() {
       <HeroSection />
       <div className={styles.pageBlock}>
         <h2>Поиск</h2>
-        <p style={{ marginTop: -4 }}>Запрос: {query ? `“${query}”` : '—'}</p>
+        <p style={{ marginTop: -4, color: metaColor }}>Запрос: {query ? `“${query}”` : '—'}</p>
 
-        {query && (
-          <p style={{ marginTop: 12, marginBottom: 20 }}>
-            Найдено: {results.length}
-          </p>
+        {query && results.length > 0 && (
+          <p style={{ marginTop: 12, marginBottom: 20, color: metaColor }}>Найдено: {results.length}</p>
         )}
 
         {!query && (
-          <p>Введите запрос в поле поиска вверху.</p>
+          <p style={{ color: metaColor }}>Введите запрос в поле поиска вверху.</p>
+        )}
+
+        {query && results.length === 0 && (
+          <p style={{ marginTop: 12, color: metaColor }}>По вашему запросу ничего не найдено</p>
         )}
 
         <ul style={{ listStyle: 'none', paddingLeft: 0, marginTop: 12 }}>
@@ -48,7 +65,7 @@ export default function SearchResults() {
               <Link to={r.path} style={{ fontSize: '1.1rem', fontWeight: 600 }}>
                 {r.title}
               </Link>
-              <div style={{ color: 'var(--muted, #555)', marginTop: 6 }}>
+              <div style={{ color: descriptionColor, marginTop: 6 }}>
                 {r.content}
               </div>
             </li>
