@@ -1,7 +1,7 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import logo from "../../../public/logo (1).svg";
 import styles from "./HeroSection.module.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 const LampIcon = ({ on }: { on: boolean }) => (
   <svg
     viewBox="0 0 24 24"
@@ -9,7 +9,7 @@ const LampIcon = ({ on }: { on: boolean }) => (
     aria-hidden="true"
     className={styles.lampIcon}
   >
-  
+
     <path d="M12 2c1.5 0 2.5 1.2 2.5 2.2 0 .6-.3 1.1-.7 1.5" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
     <path d="M12 5.7v2.1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
     <path d="M9.5 8.2h5a.8.8 0 0 1 .8.8v.6H8.7V9a.8.8 0 0 1 .8-.8Z" fill="currentColor" />
@@ -33,6 +33,9 @@ export const HeroSection = () => {
       : false
   );
   const [isSwinging, setIsSwinging] = useState(false);
+  const [query, setQuery] = useState("");
+  const navigate = useNavigate();
+  const headerRef = useRef<HTMLElement | null>(null);
 
   useEffect(() => {
     const handleResize = () => {
@@ -45,6 +48,18 @@ export const HeroSection = () => {
   useEffect(() => {
     document.body.style.overflow = menuOpen ? "hidden" : "auto";
   }, [menuOpen]);
+
+  useEffect(() => {
+    const updateHeaderHeightVar = () => {
+      if (headerRef.current) {
+        const h = headerRef.current.offsetHeight;
+        document.documentElement.style.setProperty("--header-height", `${h}px`);
+      }
+    };
+    updateHeaderHeightVar();
+    window.addEventListener("resize", updateHeaderHeightVar);
+    return () => window.removeEventListener("resize", updateHeaderHeightVar);
+  }, []);
 
   const toggleTheme = () => {
     const nextDark = !isDark;
@@ -62,12 +77,12 @@ export const HeroSection = () => {
   };
 
   return (
-    <header className={styles.header}>
+    <header className={styles.header} ref={headerRef}>
       <Link to="/">
-      <img src={logo} alt="logo" style={{cursor: "pointer"}}/>
+        <img src={logo} alt="logo" style={{ cursor: "pointer" }} />
       </Link>
 
-      <nav className={menuOpen ? `${styles.open}` : ""}>
+      <nav className={`${styles.mainNav} ${menuOpen ? styles.open : ''}`}>
         <ul>
           <li>Кто мы</li>
           <li>Чем мы занимаемся</li>
@@ -80,7 +95,7 @@ export const HeroSection = () => {
           )}
         </ul>
       </nav>
-            <div className={styles.controls}>
+      <div className={styles.controls}>
         <button
           className={styles.themeToggle}
           onClick={toggleTheme}
@@ -102,6 +117,28 @@ export const HeroSection = () => {
           <span className={styles.burgerLine}></span>
         </button>
       </div>
+
+      <form
+        className={styles.searchForm}
+        role="search"
+        onSubmit={(e) => {
+          e.preventDefault();
+          const q = query.trim();
+          if (!q) return;
+          setMenuOpen(false);
+          navigate(`/search?q=${encodeURIComponent(q)}`);
+        }}
+      >
+        <input
+          type="search"
+          placeholder="Поиск..."
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+          className={styles.searchInput}
+          aria-label="Поиск"
+        />
+        <button type="submit" className={styles.searchButton}>Найти</button>
+      </form>
     </header>
   );
 };

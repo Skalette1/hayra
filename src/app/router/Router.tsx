@@ -10,17 +10,22 @@ import { BeVolonteur } from "../../pages/subpages/interestingSubpages/BeVolonteu
 import { HavingHope } from "../../pages/subpages/HavingHope";
 import { YourTime } from "../../pages/subpages/interestingSubpages/YourTime";
 import { BePartner } from "../../pages/subpages/supportSubpages/BePartner";
-import { BeDonor } from "../../pages/subpages/supportSubpages/beDonor";
+import { BeDonor } from "../../pages/subpages/supportSubpages/BeDonor";
 import { TreeInParadise } from "../../pages/subpages/supportSubpages/TreeInParadise";
 import { OurChild } from "../../pages/subpages/footerSubpages/OurChild";
 import { ProductsPoor } from "../../pages/subpages/footerSubpages/ProductsPoor";
 import { Read } from "../../pages/subpages/footerSubpages/Read";
 import { HistoryProject } from "../../pages/subpages/footerSubpages/HistoryProject";
+import SearchResults from "../../pages/subpages/SearchResults";
 
 export const router = createHashRouter([
   {
     path: "/",
     element: <App />,
+  },
+  {
+    path: "/search",
+    element: <SearchResults />,
   },
   {
     path: "/HelpProject",
