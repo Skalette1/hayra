@@ -97,3 +97,10 @@
   margin-top: 14px;
   font-style: italic;
 }
+
+:global(html.dark) .pageBlock {
+  filter: invert(1) hue-rotate(180deg);
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+

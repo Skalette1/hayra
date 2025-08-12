@@ -198,25 +198,6 @@
     align-items: stretch;
   }
 
-  .sidebar {
-    flex-direction: row;
-    justify-content: center;
-    gap: 1.5rem;
-    min-width: 100%;
-  }
-
-  .numberCircle {
-    width: 60px;
-    height: 60px;
-    font-size: 2rem;
-  }
-
-  .numberText {
-    font-size: 1rem;
-    text-align: center;
-    max-width: 80px;
-  }
-
   .content {
     width: 100%;
   }

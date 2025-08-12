@@ -12,6 +12,10 @@ import { YourTime } from "../../pages/subpages/interestingSubpages/YourTime";
 import { BePartner } from "../../pages/subpages/supportSubpages/BePartner";
 import { BeDonor } from "../../pages/subpages/supportSubpages/beDonor";
 import { TreeInParadise } from "../../pages/subpages/supportSubpages/TreeInParadise";
+import { OurChild } from "../../pages/subpages/footerSubpages/OurChild";
+import { ProductsPoor } from "../../pages/subpages/footerSubpages/ProductsPoor";
+import { Read } from "../../pages/subpages/footerSubpages/Read";
+import { HistoryProject } from "../../pages/subpages/footerSubpages/HistoryProject";
 
 export const router = createHashRouter([
   {
@@ -69,6 +73,22 @@ export const router = createHashRouter([
   {
     path: "/support/volunteer",
     element: <BeVolonteur />
+  },
+  {
+    path: "/footer/ourchild",
+    element: <OurChild />
+  },
+  {
+    path: "/footer/productspoor",
+    element: <ProductsPoor />
+  },
+  {
+    path: "/footer/read",
+    element: <Read />
+  },
+  {
+    path: "/footer/historyproject",
+    element: <HistoryProject />
   },
 ]);
 

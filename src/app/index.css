@@ -17,8 +17,10 @@ body {
   color: #0f0f0f;
 }
 
+/* Важно: плавный скролл мешает точному восстановлению позиции.
+   Если нужен smooth для якорей — включим точечно, а глобально отключим. */
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: auto;
 }
 
 
@@ -42,6 +44,3 @@ html.dark .leaflet-container {
 html.dark .leaflet-container .leaflet-tile {
   filter: none !important;
 }
-
-
-

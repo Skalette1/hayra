@@ -84,6 +84,12 @@ aside {
   margin-right: auto;
 }
 
+.sectionWrap aside {
+  text-align: left;
+  margin-right: auto;
+  transform: translateX(-55px);
+}
+
 .numberCircle {
   width: 70px;
   height: 70px;
@@ -172,5 +178,11 @@ aside {
 
   .bottom button {
     width: auto;
+  }
+
+  .sectionWrap aside {
+    text-align: left;
+    margin-right: auto;
+    transform: translateX(5px);
   }
 }

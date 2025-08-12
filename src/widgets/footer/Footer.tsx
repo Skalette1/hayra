@@ -2,6 +2,7 @@ import React from "react";
 import { FiPhone, FiMail, FiMapPin } from "react-icons/fi";
 import { FaApple, FaGooglePlay } from "react-icons/fa";
 import styles from "./Footer.module.css";
+import { Link } from "react-router-dom";
 
 export const Footer = () => {
   return (
@@ -12,24 +13,24 @@ export const Footer = () => {
       <div>
         <ul>
           <p>Кто мы</p>
-          <li>Стать донором</li>
-          <li>Проект «Дерево в раю»</li>
+          <li><Link to="/support/BeDonor">Стать донором</Link></li>
+          <li><Link to="/support/tree">Проект «Дерево в раю»</Link></li>
         </ul>
       </div>
 
       <div>
         <ul>
-          <p>Наши акции</p>
-          <li>Благотворительные сборы</li>
-          <li>Мероприятия</li>
+          <p>Проекты</p>
+          <li><Link to="/footer/ourchild">Наши дети</Link></li>
+          <li><Link to="/footer/productspoor">Продукты малоимущим</Link></li>
         </ul>
       </div>
 
       <div>
         <ul>
           <p>О нас</p>
-          <li>Новости</li>
-          <li>История проекта</li>
+          <li><Link to="/footer/ourchild">Читай</Link></li>
+          <li><Link to="/footer/historyproject">История проекта</Link></li>
         </ul>
       </div>
 
@@ -38,7 +39,7 @@ export const Footer = () => {
           <p>Контакты</p>
           <div className={styles.emojiBlock}>
             <li style={{ fontWeight: "600" }}>
-              <FiPhone /> +7 (928) 645-55-39
+              <FiPhone /> +7 (923) 297-77-83  
             </li>
             <li>
               <FiMail /> info@hayra.ru
