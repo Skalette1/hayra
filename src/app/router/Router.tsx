@@ -17,6 +17,7 @@ import { ProductsPoor } from "../../pages/subpages/footerSubpages/ProductsPoor";
 import { Read } from "../../pages/subpages/footerSubpages/Read";
 import { HistoryProject } from "../../pages/subpages/footerSubpages/HistoryProject";
 import SearchResults from "../../pages/subpages/SearchResults";
+import { NotFoundPage } from "../../pages/NotFound";
 
 export const router = createHashRouter([
   {
@@ -95,11 +96,10 @@ export const router = createHashRouter([
     path: "/footer/historyproject",
     element: <HistoryProject />
   },
+  {
+    path: "*",
+    element: <NotFoundPage />,
+  },
 ]);
 
 
-
-// {
-//   path: "*",
-//   element: <NotFoundPage />,
-// },
