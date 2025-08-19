@@ -29,7 +29,7 @@ export const Footer = () => {
       <div>
         <ul>
           <p>О нас</p>
-          <li><Link to="/footer/ourchild">Читай</Link></li>
+          <li><Link to="/footer/read">Читай</Link></li>
           <li><Link to="/footer/historyproject">История проекта</Link></li>
         </ul>
       </div>

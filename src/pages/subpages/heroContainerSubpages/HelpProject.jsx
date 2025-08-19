@@ -1,12 +1,12 @@
-import { ScrollToTop } from "../../share/components/ScrollToTop";
-import { Footer } from "../../widgets/footer/Footer";
-import { HeroSection } from "../../widgets/HeroSection/HeroSection";
-import styles from "./Pages.module.css";
+import { ScrollToTop } from "../../../share/components/ScrollToTop";
+import { Footer } from "../../../widgets/footer/Footer";
+import { HeroSection } from "../../../widgets/HeroSection/HeroSection";
+import styles from "../Pages.module.css";
 
 export const HelpProject = () => {
   return (
     <>
-    <ScrollToTop />
+      <ScrollToTop />
       <HeroSection />
       <div className={styles.pageBlock}>
         <h2 className={styles.title}>Поддержите наш проект</h2>

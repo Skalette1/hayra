@@ -19,7 +19,7 @@ export const HeroSectionContainer = () => {
       <h3 style={{fontSize: "4rem"}}>#доброрядом</h3>
       <div className={styles.heroSectionRightBtnCont}>
   <button className={styles.supportBtn}><Link to={"/HelpProject"}>Поддержать проект</Link></button>
-  <button className={styles.helpBtn}><Link to="/getHelp">Получить помощь</Link></button>
+  <button className={styles.helpBtn}><Link to="/hero/getHelp">Получить помощь</Link></button>
 </div>
       </div>
 <img src={phone} alt="phone" className={styles.heroPhone}/>

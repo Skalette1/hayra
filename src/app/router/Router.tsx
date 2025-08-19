@@ -1,8 +1,8 @@
 import { createHashRouter } from "react-router-dom";
 import App from "../App";
-import { HelpProject } from "../../pages/subpages/HelpProject";
-import { GetHelp } from "../../pages/subpages/GetHelp";
-import { MorePromotion } from "../../pages/subpages/MorePromotion";
+import { HelpProject } from "../../pages/subpages/heroContainerSubpages/HelpProject";
+import { GetHelp } from "../../pages/subpages/heroContainerSubpages/GetHelp";
+import { MorePromotion } from "../../pages/subpages/heroContainerSubpages/MorePromotion";
 import FinancialReport from "../../pages/subpages/FinancialReport";
 import { MoreKindness } from "../../pages/subpages/interestingSubpages/MoreKindness";
 import { WhoInterferes } from "../../pages/subpages/interestingSubpages/WhoInterferes";
@@ -18,6 +18,8 @@ import { Read } from "../../pages/subpages/footerSubpages/Read";
 import { HistoryProject } from "../../pages/subpages/footerSubpages/HistoryProject";
 import SearchResults from "../../pages/subpages/SearchResults";
 import { NotFoundPage } from "../../pages/NotFound";
+import { Contacts } from "../../pages/subpages/headerSubpages/Contacts";
+import { WePage } from "../../pages/subpages/headerSubpages/WePage";
 
 export const router = createHashRouter([
   {
@@ -33,8 +35,8 @@ export const router = createHashRouter([
     element: <HelpProject />,
   },
   {
-    path: "/getHelp",
-    element: <GetHelp />
+    path: "/contacts",
+    element: <Contacts />
   },
   {
     path: "/morepromotion",
@@ -65,6 +67,14 @@ export const router = createHashRouter([
     element: <YourTime />
   },
   {
+    path: "/hero/wepage",
+    element: <WePage />
+  },
+  {
+    path: "/hero/getHelp",
+    element: <GetHelp />
+  },
+  {
     path: "/support/finance",
     element: <BePartner />
   },
@@ -91,6 +101,10 @@ export const router = createHashRouter([
   {
     path: "/footer/read",
     element: <Read />
+  },
+  {
+    path: "/footer/historyproject",
+    element: <HistoryProject />
   },
   {
     path: "/footer/historyproject",

@@ -84,13 +84,13 @@ export const HeroSection = () => {
 
       <nav className={`${styles.mainNav} ${menuOpen ? styles.open : ''}`}>
         <ul>
-          <li>Кто мы</li>
-          <li>Чем мы занимаемся</li>
-          <li>Контакты</li>
+          <li><Link to="/hero/wepage">Кто мы</Link></li>
+          <li><Link to="/HelpProject">Поддержать проект</Link></li>
+          <li><Link to="/contacts">Контакты</Link></li>
           {isMobile && (
             <>
-              <li>Финансовый отчет</li>
-              <li>Официальные документы</li>
+              <li><Link to="/financialreport">Финансовый отчет</Link></li>
+              <li><Link to="/footer/read">Читай</Link></li>
             </>
           )}
         </ul>
