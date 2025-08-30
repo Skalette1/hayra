@@ -1,6 +1,6 @@
 :root {
-  --green: #01753D;
-  --gold: #AE9B31;
+  --green: #01753d;
+  --gold: #ae9b31;
 }
 
 .sectionWrap {
@@ -10,7 +10,6 @@
   flex-direction: column;
   align-items: center;
   margin-left: 7rem;
-
 }
 
 .top h2 {
@@ -37,7 +36,7 @@
 }
 
 .bottomRight p {
-  opacity: .8;
+  opacity: 0.8;
   font-size: 1.4rem;
 }
 
@@ -55,7 +54,7 @@
 .appleHand {
   height: 300px;
   width: 300px;
-  z-index: .9;
+  z-index: 0.9;
   position: absolute;
   right: -220px;
 }
@@ -67,10 +66,10 @@
   font-family: var(--font-main);
   font-weight: 600;
   border: 2px solid #000;
-  border-radius: .7rem;
-  padding: 0.5rem .6rem;
+  border-radius: 0.7rem;
+  padding: 0.5rem 0.6rem;
   width: 70%;
-  transition: .3s all ease-in-out;
+  transition: 0.3s all ease-in-out;
 }
 
 .bottom button:hover {
@@ -110,7 +109,6 @@ aside {
   letter-spacing: 0.05em;
   text-transform: uppercase;
 }
-
 
 @media (max-width: 850px) {
   .sectionWrap {
@@ -173,7 +171,7 @@ aside {
     width: 100%;
     display: flex;
     flex-direction: column;
-    margin-left: .4rem;
+    margin-left: 0.4rem;
   }
 
   .bottom button {

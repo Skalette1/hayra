@@ -8,7 +8,7 @@ import {
   FiDollarSign,
   FiUserPlus,
   FiUsers,
-  FiArrowRight
+  FiArrowRight,
 } from "react-icons/fi";
 import { GiTreeBranch } from "react-icons/gi";
 import { Link } from "react-router-dom";
@@ -50,7 +50,10 @@ export const Support = () => {
 
       <div className={styles.intro}>
         <h2>Поддержите проект</h2>
-        <p>Любая помощь — это вклад в лучшее будущее. Финансово, участием или добрым делом.</p>
+        <p>
+          Любая помощь — это вклад в лучшее будущее. Финансово, участием или
+          добрым делом.
+        </p>
       </div>
 
       <div className={styles.cards}>

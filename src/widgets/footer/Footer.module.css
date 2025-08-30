@@ -26,7 +26,7 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  transition: .3s all ease-in-out;
+  transition: 0.3s all ease-in-out;
 }
 
 .footer ul li:hover {
@@ -44,7 +44,7 @@
   align-items: center;
   gap: 0.5rem;
   cursor: pointer;
-  padding: 0.7rem .5rem;
+  padding: 0.7rem 0.5rem;
   border-radius: 0.7rem;
   border: none;
   font-size: 1.2rem;
@@ -55,7 +55,7 @@
 
 .storeBtn:hover {
   color: #fff;
-  background-color: #AE9B31;
+  background-color: #ae9b31;
 }
 
 @media (max-width: 768px) {
@@ -66,7 +66,7 @@
   }
 
   .footer ul li {
-  margin-top: .8rem;
+    margin-top: 0.8rem;
   }
 
   .btnContainer {
@@ -80,5 +80,5 @@
 }
 
 :global(html.dark) footer {
-  background-color: #f0efef; 
+  background-color: #f0efef;
 }

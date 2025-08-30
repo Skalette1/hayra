@@ -57,7 +57,9 @@
 }
 
 .intro p {
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family:
+    "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   font-size: 1.3rem;
   color: #252525;
   max-width: 600px;
@@ -71,7 +73,9 @@
 }
 
 .cards h3 {
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family:
+    "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   font-size: 1.2rem;
 }
 
@@ -98,7 +102,6 @@
   margin-bottom: 1rem;
 }
 
-
 /* .icon:hover {
   filter: brightness(0) saturate(100%) invert(31%) sepia(91%) saturate(294%) hue-rotate(5deg) brightness(98%) contrast(100%);
 } */
@@ -108,7 +111,7 @@
   height: 40px;
   width: 100px;
   transform: skew(1.4);
-  transition: .3s all ease-in-out;
+  transition: 0.3s all ease-in-out;
 }
 
 .card:hover .iconArrow {
@@ -245,13 +248,14 @@
 /* duplicate .cta definition merged above to avoid overrides */
 
 .cta:hover {
-  background: #01753D;
+  background: #01753d;
 }
 
 :global(html.dark) .supportWrapper {
-  background-color: #f0efef; 
+  background-color: #f0efef;
 }
 
 :global(html.dark) .card {
-  background-color: #f0efef; 
+  background-color: #f0efef;
 }
+

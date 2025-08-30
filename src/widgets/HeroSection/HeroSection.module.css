@@ -2,7 +2,7 @@
   margin-top: 0.5rem;
   display: grid;
   grid-template-columns: auto 1fr auto;
-  grid-template-areas: 'logo spacer actions' 'search search search';
+  grid-template-areas: "logo spacer actions" "search search search";
   align-items: center;
   gap: 10px 14px;
   padding: 0.8rem 1rem;
@@ -47,7 +47,7 @@
 .burgerLine {
   width: 100%;
   height: 3px;
-  background-color: var(--green, #01753D);
+  background-color: var(--green, #01753d);
   border-radius: 2px;
   transition: all 0.3s linear;
 }
@@ -69,7 +69,7 @@
     margin: 0;
     display: grid;
     grid-template-columns: auto 1fr auto;
-    grid-template-areas: 'logo spacer actions' 'search search search';
+    grid-template-areas: "logo spacer actions" "search search search";
     grid-gap: 10px 12px;
     align-items: center;
     padding: 0.8rem 1rem;
@@ -242,7 +242,7 @@ html.dark .searchInput {
   padding: 0 12px;
   border-radius: 10px;
   border: 1px solid rgba(0, 0, 0, 0.15);
-  background: var(--green, #01753D);
+  background: var(--green, #01753d);
   color: #fff;
   cursor: pointer;
 }

@@ -1,7 +1,7 @@
 :root {
-  --gold: #AE9B31;
-  --green-dark: #01753D;
-  --green-light: #3CA14E;
+  --gold: #ae9b31;
+  --green-dark: #01753d;
+  --green-light: #3ca14e;
   --white: #fff;
 }
 
@@ -86,7 +86,9 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
   text-align: left;
 }
 
@@ -102,7 +104,9 @@
 }
 
 .icons svg {
-  transition: transform 0.3s ease, color 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease;
 }
 
 .slideButton:hover .icons svg {
@@ -136,7 +140,9 @@
   font-size: 2rem;
   cursor: pointer;
   z-index: 10;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -182,7 +188,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
   font-size: 2rem;
 }
 

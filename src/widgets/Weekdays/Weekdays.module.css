@@ -27,7 +27,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: .5rem;
+  gap: 0.5rem;
 }
 
 .wrapper aside {
@@ -81,7 +81,7 @@
   flex-direction: column;
   transform: translateY(25.9rem);
   width: 100%;
-  transition: .8s all ease;
+  transition: 0.8s all ease;
   color: #fff;
   font-weight: 800;
   font-size: 1.5rem;
@@ -105,19 +105,19 @@
   display: flex;
   flex-direction: column;
   padding: 0.7rem;
-  margin: .4rem .7rem;
+  margin: 0.4rem 0.7rem;
 }
 
 .hiddenText {
   opacity: 0;
   margin-top: 1.3rem;
-  padding-left: .5rem;
+  padding-left: 0.5rem;
   font-size: 1.3rem;
 }
 
 .hiddenText button {
   border-radius: 4px;
-  padding: .6rem;
+  padding: 0.6rem;
   color: #ffffff;
   background: var(--button);
   border: 1px solid var(--button);
@@ -147,7 +147,7 @@
 }
 
 .infoCard button:hover {
-  transition: .6s all ease;
+  transition: 0.6s all ease;
   text-align: center;
   border-radius: 4px;
   color: var(--button);
@@ -167,7 +167,7 @@
 }
 
 .card::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -214,9 +214,9 @@
   filter: invert(1) hue-rotate(180deg);
 }
 
-@media(max-width: 480px) {
+@media (max-width: 480px) {
   .wrapper {
-    border-radius: .5rem;
+    border-radius: 0.5rem;
   }
 
   .wrapper aside {

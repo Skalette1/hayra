@@ -1,23 +1,23 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.tsx'
-import { RouterProvider } from 'react-router-dom'
-import { router } from './router/Router.tsx'
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import "./index.css";
+import App from "./App.tsx";
+import { RouterProvider } from "react-router-dom";
+import { router } from "./router/Router.tsx";
 
 // Отключаем автоскролл браузера, чтобы управлять им вручную
-if (typeof window !== 'undefined' && 'scrollRestoration' in window.history) {
+if (typeof window !== "undefined" && "scrollRestoration" in window.history) {
   try {
-    window.history.scrollRestoration = 'manual';
-  } catch { }
+    window.history.scrollRestoration = "manual";
+  } catch {}
 }
-const savedTheme = localStorage.getItem('theme') as 'light' | 'dark' | null
-if (savedTheme === 'dark') {
-  document.documentElement.classList.add('dark')
-} else if (savedTheme === 'light') {
-  document.documentElement.classList.remove('dark')
+const savedTheme = localStorage.getItem("theme") as "light" | "dark" | null;
+if (savedTheme === "dark") {
+  document.documentElement.classList.add("dark");
+} else if (savedTheme === "light") {
+  document.documentElement.classList.remove("dark");
 }
 
-createRoot(document.getElementById('root')!).render(
-  <RouterProvider router={router} />
-)
+createRoot(document.getElementById("root")!).render(
+  <RouterProvider router={router} />,
+);

@@ -36,84 +36,82 @@ export const router = createHashRouter([
   },
   {
     path: "/contacts",
-    element: <Contacts />
+    element: <Contacts />,
   },
   {
     path: "/morepromotion",
-    element: <MorePromotion />
+    element: <MorePromotion />,
   },
   {
     path: "/financialreport",
-    element: <FinancialReport />
+    element: <FinancialReport />,
   },
   {
     path: "/placeholder-1",
-    element: <MoreKindness />
+    element: <MoreKindness />,
   },
   {
     path: "/placeholder-2",
-    element: <WhoInterferes />
+    element: <WhoInterferes />,
   },
   {
     path: "/placeholder-3",
-    element: <BeVolonteur />
+    element: <BeVolonteur />,
   },
   {
     path: "/placeholder-4",
-    element: <HavingHope />
+    element: <HavingHope />,
   },
   {
     path: "/placeholder-5",
-    element: <YourTime />
+    element: <YourTime />,
   },
   {
     path: "/hero/wepage",
-    element: <WePage />
+    element: <WePage />,
   },
   {
     path: "/hero/getHelp",
-    element: <GetHelp />
+    element: <GetHelp />,
   },
   {
     path: "/support/finance",
-    element: <BePartner />
+    element: <BePartner />,
   },
   {
     path: "/support/BeDonor",
-    element: <BeDonor />
+    element: <BeDonor />,
   },
   {
     path: "/support/tree",
-    element: <TreeInParadise />
+    element: <TreeInParadise />,
   },
   {
     path: "/support/volunteer",
-    element: <BeVolonteur />
+    element: <BeVolonteur />,
   },
   {
     path: "/footer/ourchild",
-    element: <OurChild />
+    element: <OurChild />,
   },
   {
     path: "/footer/productspoor",
-    element: <ProductsPoor />
+    element: <ProductsPoor />,
   },
   {
     path: "/footer/read",
-    element: <Read />
+    element: <Read />,
   },
   {
     path: "/footer/historyproject",
-    element: <HistoryProject />
+    element: <HistoryProject />,
   },
   {
     path: "/footer/historyproject",
-    element: <HistoryProject />
+    element: <HistoryProject />,
   },
   {
     path: "*",
     element: <NotFoundPage />,
   },
 ]);
-
-
