@@ -101,9 +101,24 @@
 }
 
 :global(html.dark) .pageBlock {
-  filter: invert(1) hue-rotate(180deg);
+  color: #000000 !important;
+  background-color: rgba(39, 37, 37, 0.6);
+  filter: invert(1);
+}
+
+:global(html.dark) .pageBlock h5 {
+  font-size: 1.3rem;
+  color: #FFF;
+}
+
+:global(html.dark) .pageBlock img {
+  filter: invert() !important;
+}
+
+:global(html.dark) .pageBlock h2,
+:global(html.dark) .pageBlock h3,
+:global(html.dark) .pageBlock p {
   color: #fff !important;
-  background-color: rgba(0, 0, 0, 0.6);
 }
 
 .notFoundPage {
